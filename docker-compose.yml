@@ -5,12 +5,10 @@ services:
     container_name: sleep-service
     build:
       context: ./sleep-service
-      target: development
     volumes:
       - ./sleep-service:/usr/src/app
     ports:
       - 8080:8080
-    command: npm run start:dev
     networks:
       - webnet
     depends_on:
