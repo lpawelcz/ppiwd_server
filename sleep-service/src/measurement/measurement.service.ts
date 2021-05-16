@@ -12,7 +12,7 @@ export class MeasurementService {
     return createdTest.save();
   }
 
-  /*async findAll(): Promise<Test[]> {
-    return this.testModel.find().exec();
-  } */
+  async findAll(): Promise<Measurement[]> {
+    return this.measurementModel.find().exec();
+  }
 }

@@ -10,4 +10,9 @@ export class MeasurementController {
   create(@Body() request) {
     return this.service.create(request)
   }
+
+  @Get('/all')
+  findAll() {
+    return this.service.findAll()
+  }
 }
