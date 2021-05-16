@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { PingController } from './ping/ping.controller';
 import { PingService } from './ping/ping.service';
-import { TestModule } from './test/test.module';
+import { MeasurementModule } from './measurement/measurement.module';
 
 @Module({
   imports: [
@@ -14,6 +14,7 @@ import { TestModule } from './test/test.module';
       authSource: "admin"
   }),
     TestModule
+    MeasurementModule,
   ],
   controllers: [PingController],
   providers: [PingService],
