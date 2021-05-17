@@ -3,6 +3,7 @@ import { Document } from 'mongoose';
 import * as mongoose from 'mongoose';
 import { Sleep } from './_sleep.schema';
 import { Data } from './_data.schema';
+import { Questionnaire } from './_questionnaire.schema';
 
 export type MeasurementDocument = Measurement & Document;
 
@@ -14,8 +15,8 @@ export class Measurement {
   @Prop()
   sleep: Sleep;
 
-  /* @Prop()
-  questionnaire: string */
+  @Prop()
+  questionnaire: Questionnaire
 
   @Prop()
   data: Data
